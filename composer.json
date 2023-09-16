@@ -1,0 +1,53 @@
+{
+    "name": "slj-me/slj-laravel-client",
+    "type": "library",
+    "description": "SLJ Laravel Client",
+    "homepage": "https://github.com/slj-me/slj-laravel-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Shen",
+            "email": "sica@qq.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "^8.0",
+        "socialiteproviders/slj": "^1.0",
+        "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0",
+        "illuminate/routing": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0",
+        "illuminate/contracts": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0",
+        "illuminate/database": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SLJ\\SLJLaravelClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SLJ\\SLJLaravelClient\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+              "SLJ\\SLJLaravelClient\\SLJLaravelClientServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
