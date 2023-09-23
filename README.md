@@ -27,6 +27,23 @@ Then do vendor publish:
 php artisan vendor:publish --provider="SLJ\SLJLaravelClient\SLJLaravelClientServiceProvider"
 ```
 
+Modify user model:
+
+```php
+$this->fillable = [
+    ...
+    'slj_id',
+    'slj_access_token',
+    'slj_refresh_token',
+];
+$this->hidden = [
+    ...
+    'slj_id',
+    'slj_access_token',
+    'slj_refresh_token',
+];
+```
+
 Add configuration to `config/services.php`
 
 ```php
@@ -67,8 +84,6 @@ SLJ_CLIENT_SECRET="your_client_secret"
 SLJ_REDIRECT_URI="https://yourdomain.com/auth/slj/callback"
 SLJ_HOST="https://auth.youdomain.com"
 ```
-
-# Features
 
 ## TODO
 
