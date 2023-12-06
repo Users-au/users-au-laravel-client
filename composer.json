@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Userau\\UserauLaravelClient\\": "src/"
+            "Usersau\\UsersauLaravelClient\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Userau\\UserauLaravelClient\\Test\\": "tests/"
+            "Usersau\\UsersauLaravelClient\\Test\\": "tests/"
         }
     },
     "scripts": {
@@ -41,7 +41,7 @@
         },
         "laravel": {
             "providers": [
-              "Userau\\UserauLaravelClient\\UserauLaravelClientServiceProvider"
+              "Usersau\\UsersauLaravelClient\\UsersauLaravelClientServiceProvider"
             ]
         }
     },
