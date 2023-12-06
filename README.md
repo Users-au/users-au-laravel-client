@@ -47,7 +47,7 @@ $this->hidden = [
 Add configuration to `config/services.php`
 
 ```php
-'users-au' => [    
+'usersau' => [    
   'client_id' => env('USERSAU_CLIENT_ID'),  
   'client_secret' => env('USERSAU_CLIENT_SECRET'),  
   'redirect' => env('USERSAU_REDIRECT_URI'),
