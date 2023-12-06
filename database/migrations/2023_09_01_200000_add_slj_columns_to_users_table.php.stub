@@ -13,9 +13,9 @@ return new class extends Migration {
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('slj_id', 36)->unique();
-            $table->text('slj_access_token');
-            $table->text('slj_refresh_token')->nullable();
+            $table->string('usersau_id', 36)->unique();
+            $table->text('usersau_access_token');
+            $table->text('usersau_refresh_token')->nullable();
             $table->string('password')->nullable()->change();
         });
     }
@@ -28,9 +28,9 @@ return new class extends Migration {
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('slj_id');
-            $table->dropColumn('slj_access_token');
-            $table->dropColumn('slj_refresh_token');
+            $table->dropColumn('usersau_id');
+            $table->dropColumn('usersau_access_token');
+            $table->dropColumn('usersau_refresh_token');
             $table->string('password')->nullable(false)->change();
         });
     }

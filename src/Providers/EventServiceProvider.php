@@ -1,6 +1,6 @@
 <?php
 
-namespace SLJ\SLJLaravelClient\Providers;
+namespace Usersau\UsersauLaravelClient\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -14,7 +14,7 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         \SocialiteProviders\Manager\SocialiteWasCalled::class => [
-            \SocialiteProviders\Slj\SljExtendSocialite::class.'@handle',
+            \SocialiteProviders\Usersau\UsersauExtendSocialite::class.'@handle',
         ],
     ];
 }

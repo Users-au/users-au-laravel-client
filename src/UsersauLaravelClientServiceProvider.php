@@ -1,25 +1,25 @@
 <?php
 
 /*
- * (c) SLJ.me <support@slj.me>
+ * (c) Users.au <support@users.au>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace SLJ\SLJLaravelClient;
+namespace Usersau\UsersauLaravelClient;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
-class SLJLaravelClientServiceProvider extends ServiceProvider
+class UsersauLaravelClientServiceProvider extends ServiceProvider
 {
     /**
      * Publishes all the config file this package needs to function.
      */
     public function boot()
     {
-        $this->app->register(\SLJ\SLJLaravelClient\Providers\EventServiceProvider::class);
+        $this->app->register(\Usersau\UsersauLaravelClient\Providers\EventServiceProvider::class);
         $this->registerPublishing();
         $this->registerRoutes();
     }
@@ -47,7 +47,7 @@ class SLJLaravelClientServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../config' => config_path(),
                 __DIR__.'/../database/migrations' => database_path('migrations'),
-            ], 'slj');
+            ], 'usersau');
         }
     }
 
@@ -59,9 +59,9 @@ class SLJLaravelClientServiceProvider extends ServiceProvider
     protected function routeConfiguration()
     {
         return [
-            'namespace' => 'SLJ\SLJLaravelClient\Http\Controllers',
-            //'prefix' => 'slj',
-            'as' => 'slj.',
+            'namespace' => 'Usersau\UsersauLaravelClient\Http\Controllers',
+            //'prefix' => 'usersau',
+            'as' => 'usersau.',
             'middleware' => 'web',
         ];
     }

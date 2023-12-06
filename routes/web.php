@@ -3,26 +3,26 @@
 use Illuminate\Support\Facades\Route;
 
 Route::group([
-    'middleware' => config('slj.middleware', ['web'])
+    'middleware' => config('usersau.middleware', ['web'])
 ],
     function () {
-        Route::get('/auth/slj/redirect', [
-            \SLJ\SLJLaravelClient\Http\Controllers\AuthController::class,
+        Route::get('/auth/usersau/redirect', [
+            \Usersau\UsersauLaravelClient\Http\Controllers\AuthController::class,
             'redirect'
         ])->name('login');
 
-        Route::get('/auth/slj/callback', [
-            \SLJ\SLJLaravelClient\Http\Controllers\AuthController::class,
+        Route::get('/auth/usersau/callback', [
+            \Usersau\UsersauLaravelClient\Http\Controllers\AuthController::class,
             'callback'
         ]);
 
-        Route::get('/auth/slj/logout', [
-            \SLJ\SLJLaravelClient\Http\Controllers\AuthController::class,
+        Route::get('/auth/usersau/logout', [
+            \Usersau\UsersauLaravelClient\Http\Controllers\AuthController::class,
             'logout'
         ])->name('logout');
 
-        Route::get('/auth/slj/account', [
-            \SLJ\SLJLaravelClient\Http\Controllers\AuthController::class,
+        Route::get('/auth/usersau/account', [
+            \Usersau\UsersauLaravelClient\Http\Controllers\AuthController::class,
             'account'
         ])->name('account');
     }
